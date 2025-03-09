@@ -1,0 +1,11 @@
+//mongoDb shell (client)
+mongodb shell is properly build on node js . so if you dont belive me just write in terminal mongosh --nodb . then you will access fs, path etc module . not only that we can also run a server from mongoDb Shell in require(). and access it . 
+
+
+//mongoDb server
+  when ever we talk about the server . or downloud mongodb server . its has down in two way . 1) C:\Program Files\MongoDB\Server\7.0\bin\mongo.exe . == it will by write mongod  in the terminal                     
+    2) 2nd is mongodb run as services it run bydefault . its path is 
+      C:\Program Files\MongoDB\Server\8.0\bin\mongo
+
+
+

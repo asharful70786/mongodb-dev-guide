@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "MongoDB Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5"
+  }
+}

@@ -1,0 +1,29 @@
+//cursor is an javaScript object in eys of JS/NODE.J
+//1st we have to always remember that MOngoDB behind the seen connect using tcp server and there build is [wireTiger(Almost Mybe)];
+//in javas Script 
+//let res = await fetch("https://fakestoreapiserver.reactbd.com/smart");  //"Any_APi"
+//res.body[symbol.asyncIterator] ~ its its return a function that means its a async iterable object
+
+//To see Curser add in you Collection min 25 document
+
+
+// and that logic also apply on MOngoDB cursor object
+//and in the cursor we have some property like hasNext() and next() method
+// hasNext() return a boolean value and next() return a promise to all the next document
+
+
+ cursor[Symbol.asyncIterator] // Returns an async iterator that  we can use for await for of loop
+
+   console.log(await cursor.next())// it will return a promise to the first document
+  console.log(await cursor.hasNext()) // it will return a boolean value ~ if there is any next that true or if not that will show false 
+  console.log(await cursor.next())
+
+  // while (await cursor.hasNext()) { // Check if more documents exist
+  //   const doc = await cursor.next(); // Fetch the next document
+  //   count++;
+  //   console.log(doc);
+  // }
+
+    //you can check TCP re , res  on Wireshark 
+  // Wireshark is the world’s most popular network protocol analyzer. It is used for troubleshooting, analysis, development and education.
+
