@@ -1,4 +1,3 @@
-
 # MongoDB Guide & Configuration
 
 This repository contains essential MongoDB concepts, configuration files, and usage examples to help users understand and implement MongoDB effectively.
@@ -25,8 +24,31 @@ This repository contains essential MongoDB concepts, configuration files, and us
 - **`mongoos.js`** – Mongoose setup for MongoDB.  
 - **`projection_live/`** – Example of MongoDB projections for optimized queries.  
 
+### 5️⃣ **MongoDB Operations (`04_Operations/`)**
+- **`crud-operations.md`** – Create, Read, Update, and Delete operations in MongoDB.  
+- **`aggregation-framework.md`** – Overview and examples of aggregation pipeline.  
+- **`indexing-and-performance.md`** – How indexing improves query performance.  
+- **`transactions-in-mongodb.md`** – Working with multi-document transactions.  
+
+### 6️⃣ **Database Validation (`05_Validation/`)**
+- **`schema-validation.md`** – Enforcing data integrity at the database level.  
+- **`json-schema.md`** – Using JSON Schema for validation.  
+
+### 7️⃣ **Data Backup & Export (`06_Backup_Export/`)**
+- **`mongodb-dump.md`** – Using `mongodump` for database backups.  
+- **`mongodb-export.md`** – Exporting data using `mongoexport`.  
+- **`restore-and-import.md`** – Restoring and importing MongoDB databases.  
+
 ## 🚀 Getting Started
 1. Clone the repository:  
    ```sh
-   https://github.com/asharful70786/mongodb-dev-guide.git
-   //to UnderStand Betterly
+   git clone https://github.com/asharful70786/mongodb-dev-guide.git
+   ```  
+2. Explore different directories to learn about MongoDB concepts and configurations.  
+
+## 📖 Additional Resources
+- MongoDB Documentation: [https://www.mongodb.com/docs/](https://www.mongodb.com/docs/)  
+- Mongoose Guide: [https://mongoosejs.com/docs/](https://mongoosejs.com/docs/)  
+
+Stay updated and contribute by adding more insights! 🚀
+
