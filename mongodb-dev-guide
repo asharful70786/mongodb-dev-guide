@@ -1,0 +1,16 @@
+<script>start("c:\\Users\\ashraful7076\\OneDrive\\Desktop\\mongodb\\mongodb-dev-guide\\");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow(".git",".git",1,0,"0 B",1742937705,"3/26/25, 2:51:45 AM");</script>
+<script>addRow("00_important_docs","00_important_docs",1,0,"0 B",1742937453,"3/26/25, 2:47:33 AM");</script>
+<script>addRow("02_types-of-databases","02_types-of-databases",1,0,"0 B",1742937091,"3/26/25, 2:41:31 AM");</script>
+<script>addRow("03_Cursor","03_Cursor",1,0,"0 B",1742937321,"3/26/25, 2:45:21 AM");</script>
+<script>addRow("04operartor in mongoDb","04operartor%20in%20mongoDb",1,0,"0 B",1742726674,"3/23/25, 4:14:34 PM");</script>
+<script>addRow("05jsonSchemaValidation","05jsonSchemaValidation",1,0,"0 B",1742937294,"3/26/25, 2:44:54 AM");</script>
+<script>addRow("06_Transactions _in _atabase","06_Transactions%20_in%20_atabase",1,0,"0 B",1742936813,"3/26/25, 2:36:53 AM");</script>
+<script>addRow("07_mongo_Dumb","07_mongo_Dumb",1,0,"0 B",1742897569,"3/25/25, 3:42:49 PM");</script>
+<script>addRow("08_mongo_export","08_mongo_export",1,0,"0 B",1742935438,"3/26/25, 2:13:58 AM");</script>
+<script>addRow(".gitignore",".gitignore",0,13,"13 B",1742937091,"3/26/25, 2:41:31 AM");</script>
+<script>addRow("data.json","data.json",0,11036,"10.8 kB",1742937091,"3/26/25, 2:41:31 AM");</script>
+<script>addRow("package-lock.json","package-lock.json",0,6498,"6.3 kB",1742937091,"3/26/25, 2:41:31 AM");</script>
+<script>addRow("package.json","package.json",0,295,"295 B",1742937091,"3/26/25, 2:41:31 AM");</script>
+<script>addRow("README.md","README.md",0,1530,"1.5 kB",1742937091,"3/26/25, 2:41:31 AM");</script>

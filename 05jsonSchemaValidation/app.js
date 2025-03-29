@@ -1,9 +1,9 @@
 import { MongoClient } from 'mongodb';
 
-// schema validation is we can validate the data before inserting into the database and we set it on DaTab se level . can easily check this this validation store on dataBase code . go t mongodb compass and check in the validation section
+// schema validation is we can validate the data before inserting into the database and we set it on DataBase level . can easily check this this validation store on dataBase code . go t mongodb compass and check in the validation section
 
 
-//want to know what is command check 01MongoDb_Command/app.js
+//want to know what is command check 04MongoDb_Command/app.js
 
 //command only apply on db . and callMod is used to apply on  existing collection
 
