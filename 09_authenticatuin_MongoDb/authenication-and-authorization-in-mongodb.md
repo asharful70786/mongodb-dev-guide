@@ -1,17 +1,19 @@
 # Enabling Authentication in MongoDB Server
 
-## 1. **Starting MongoDB with Authentication**
+> Always remember: where `db.createUser()` happens, we can only log in there and then switch databases later.
 
-### **Method 1: Using `--auth` Flag (Terminal-Based)**
+---
 
+## 1. Starting MongoDB with Authentication
+
+### Method 1: Using `--auth` Flag (Terminal-Based)
 Run MongoDB with authentication enabled using the `--auth` flag:
 
 ```sh
 mongod --auth
 ```
 
-### **Method 2: Using Configuration File (`mongod.conf`)**
-
+### Method 2: Using Configuration File (`mongod.conf`)
 Add the following lines under the `security` section:
 
 ```yaml
@@ -19,41 +21,43 @@ security:
   authorization: enabled
 ```
 
-Then, restart MongoDB Server:
+Then, restart the MongoDB server.
 
 ---
 
-## 2. **Creating the Admin User in `admin` Database (Root Privileges)**
+## 2. Creating the Admin User in `admin` Database (Root Privileges)
 
 After enabling authentication, you must create an **admin user** to manage the database.
 
 1. Open the MongoDB shell:
 
-   ```sh
-   mongosh
-   ```
+```sh
+mongosh
+```
 
 2. Switch to the `admin` database:
 
-   ```js
-   use admin
-   ```
+```js
+use admin
+```
 
 3. Create the admin user with `root` access:
 
-   ```js
-   db.createUser({ user: "admin", pwd: "admin",roles: [{ role: "root", db: "admin" }] });
-   ```
+```js
+db.createUser({
+  user: "admin",
+  pwd: "admin",
+  roles: [{ role: "root", db: "admin" }]
+});
+```
 
 Now, you **must** authenticate to perform administrative actions.
 
 ---
 
-## 3. **Connecting to MongoDB with Authentication**
+## 3. Connecting to MongoDB with Authentication
 
-After enabling authentication, use the following command to log in as `adminUser`:
-
-### **Method 1: Login Using MongoShell Command (Mongoshell)**
+### Method 1: Login Using MongoShell Command
 
 ```js
 db.auth({
@@ -68,39 +72,39 @@ or
 db.auth("username", "password");
 ```
 
-### **Method 2: Login using Terminal Command (Mongoshell)**
+### Method 2: Login using Terminal Command
 
-First exit the mongoshell and run the below command.
+Exit mongosh and run the following:
 
 ```sh
 mongosh -u "username" -p "password" --authenticationDatabase "admin"
 ```
 
-### **Method 3: Login using Terminal Command (Node.js Driver, Compass, MongoDB VSCode Extension)**
+### Method 3: Login using Connection Strings
 
-Use one of the below connection strings.
-
-`authenticationDatabase` in the below strings refers to the database in which the user was created.
+Use these connection strings in Node.js, Compass, or VSCode extension:
 
 ```js
-"mongodb://username:password@host:port/authenticationDatabase";
+"mongodb://username:password@host:port/authenticationDatabase"
 ```
 
 ```js
-"mongodb://username:password@host:port/database?authSource=authenticationDatabase";
+"mongodb://username:password@host:port/database?authSource=authenticationDatabase"
 ```
 
 ---
 
-## 3.2 **See logged in user's info**
+## 3.2 See Logged-In User Info
 
 ```js
 db.runCommand({ connectionStatus: 1 }).authInfo;
 ```
 
-## 4. **Creating Other Users with Different Roles**
+---
 
-### **Example: Creating a User with `readWrite` Access on `storageApp` Database**
+## 4. Creating Other Users with Different Roles
+
+### Example: User with `readWrite` Access on `storageApp`
 
 ```js
 use storageApp
@@ -109,10 +113,10 @@ db.createUser({
   user: "anurag",
   pwd: "anurag",
   roles: [{ role: "readWrite", db: "storageApp" }]
-})
+});
 ```
 
-### **Example: Creating a Database Administrator for `storageApp`**
+### Example: Database Administrator for `storageApp`
 
 ```js
 use storageApp
@@ -121,18 +125,14 @@ db.createUser({
   user: "dbAdminUser",
   pwd: "secureDBPass",
   roles: [{ role: "dbAdmin", db: "storageApp" }]
-})
+});
 ```
 
 ---
 
-## 5. **Updating User Roles**
+## 5. Updating User Roles
 
-### **Granting Additional Permissions to a User**
-
-If you need to update a user’s roles, use the `updateUser` command.
-
-#### **Example: Granting `dbAdmin` Role to `Anurag`**
+### Granting Additional Permissions to a User
 
 ```js
 db.updateUser("anurag", {
@@ -146,48 +146,40 @@ db.updateUser("anurag", {
 
 ---
 
-## 6. **Listing Users**
+## 6. Listing Users
 
-### **List All Users in the Current Database**
+### List All Users in the Current Database
 
 ```js
 db.getUsers();
 ```
 
-### **List All Users Across the Server (All Databases)**
-
-Switch to the `admin` database and run:
+### List All Users Across the Server (All Databases)
 
 ```js
 use admin
 
-db.system.users.find()
+db.system.users.find();
 ```
 
 ---
 
-## 7. **Testing Authentication for Other Users**
-
-To test access for a normal user (e.g., `Anurag`):
+## 7. Testing Authentication for Other Users
 
 ```sh
 mongosh -u "Anurag" -p "password123" --authenticationDatabase "storageApp"
 ```
 
-Then try reading or writing data:
+Then try:
 
 ```js
 db.products.insertOne({ name: "Laptop", price: 1000 });
 db.products.find();
 ```
 
-If `Anurag` only has `readWrite`, they won’t be able to modify the database structure (e.g., create indexes or modify schema).
-
 ---
 
-## 8. **Removing a User**
-
-If you need to remove a user, use:
+## 8. Removing a User
 
 ```js
 db.dropUser("Anurag");
@@ -195,9 +187,7 @@ db.dropUser("Anurag");
 
 ---
 
-## 9. **Logout User**
-
-If you need to logout the user, use:
+## 9. Logout User
 
 ```js
 db.logout();
@@ -205,4 +195,5 @@ db.logout();
 
 ---
 
-This guide ensures that MongoDB authentication is correctly set up and users are managed securely. 🚀
+This guide ensures that MongoDB authentication is correctly set up and users are managed securely. ✨
+

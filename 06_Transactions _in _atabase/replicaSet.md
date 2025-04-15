@@ -6,7 +6,7 @@ Replica set in Mongodb is a group of mongod instances that maintain the same dat
 
 example 
 ```
-there are two laptop and first is near by you and other is on Mumbai almost 1000 km away from you. so in that case mongodb take mongo store inital data at near by laptop and then it will replicate the data to other laptop which is far away from you. so that you can access the data from near by laptop and if that laptop is not available then you can access the data from other laptop which is far away from you.
+there are two laptop and first is near by you and other is on Mumbai almost 1000 km away from you. so in that case mongodb take mongo store initial data at near by laptop and then it will replicate the data to other laptop which is far away from you. so that you can access the data from near by laptop and if that laptop is not available then you can access the data from other laptop which is far away from you.
 ```
 ```
 that mean the Mumbai wala laptop take SnapShot of your near by laptop and uploud the data to Mumbai wala laptop. 
